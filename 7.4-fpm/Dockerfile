@@ -13,11 +13,14 @@ RUN rm -rf /var/www/html \
   git \
   libicu-dev \
   libmpdec-dev \
+  libjpeg62-turbo-dev \
   libpq-dev \
+  libfreetype6-dev \
   libjpeg-dev \
   libpng-dev \
   libzip-dev \
   unzip \
+  jpegoptim optipng pngquant gifsicle \
   vim \
   wget \
   zip \
@@ -37,5 +40,7 @@ RUN rm -rf /var/www/html \
   pdo_pgsql \
   pgsql \
   zip \
+  mysqli \
+  && docker-php-ext-enable mysqli \
   && curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer
