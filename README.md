@@ -1,4 +1,4 @@
-# Docker php:X.X-fpm 
+# Docker samuelterra22/php:X.X-fpm
 
 ## How to make a new image and push to Dockerhub
 1. `docker login`
