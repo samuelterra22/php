@@ -12,7 +12,7 @@ RUN rm -rf /var/www/html \
   curl \
   git \
   libicu-dev \
-  libmpdec-dev \
+#  libmpdec-dev \
   libpq-dev \
   libjpeg-dev \
   libpng-dev \

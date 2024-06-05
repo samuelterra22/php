@@ -1,5 +1,8 @@
 # Docker samuelterra22/php:X.X-fpm
 
+## Description
+This is a PHP image based on the official PHP image. It has some extra extensions and configurations.
+
 ## How to make a new image and push to Dockerhub
 1. `docker login`
 
