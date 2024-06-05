@@ -10,7 +10,7 @@ DOCKER_IMAGE_TAG="$(basename "$(pwd)")" # basename "$(pwd)" pega o nome do diret
 
 # Construindo a imagem Docker
 echo "Iniciando o build da imagem Docker..."
-docker buildx build --platform linux/arm64 -t $DOCKER_USERNAME/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG --no-cache --push .
+docker buildx build --platform linux/amd64,linux/arm/v7,linux/arm64 -t $DOCKER_USERNAME/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG --no-cache --push .
 
 # Captura o tempo de término em segundos
 end_time=$(date +%s)
