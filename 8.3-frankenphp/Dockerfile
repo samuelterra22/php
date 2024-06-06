@@ -17,7 +17,7 @@ RUN apt-get update -yq \
     && curl -sS https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | tee /etc/apt/keyrings/pgdg.gpg >/dev/null \
     && echo "deb [signed-by=/etc/apt/keyrings/pgdg.gpg] http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
     && apt-get update -yq \
-    && apt-get install -yq postgresql-client-$POSTGRES_VERSION \
+    && apt-get install -yq postgresql-client \
     && install-php-extensions \
     bcmath \
     intl \
