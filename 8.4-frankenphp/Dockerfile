@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.authors="samuelterra22@gmail.com"
 
 WORKDIR /var/www
 
-ARG POSTGRES_VERSION=16
+ARG POSTGRES_VERSION=18
 
 ENV DEBIAN_FRONTEND=noninteractive
 
