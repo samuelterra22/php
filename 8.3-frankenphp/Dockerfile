@@ -1,6 +1,6 @@
 FROM dunglas/frankenphp:latest-php8.3
 
-LABEL org.opencontainers.image.description = "PHP 8.3 with PostgreSQL, Redis, Composer, and other tools."
+LABEL org.opencontainers.image.description="PHP 8.3 with PostgreSQL, Redis, Composer, and other tools."
 LABEL org.opencontainers.image.authors="samuelterra22@gmail.com"
 
 WORKDIR /var/www
