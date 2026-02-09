@@ -18,6 +18,7 @@ RUN rm -rf /var/www/html \
   libfreetype6-dev \
   libjpeg-dev \
   libpng-dev \
+  libwebp-dev \
   libzip-dev \
   unzip \
   jpegoptim optipng pngquant gifsicle \
@@ -28,7 +29,7 @@ RUN rm -rf /var/www/html \
   && apt autoremove -y \
   && apt clean \
   && pecl install redis \
-  && docker-php-ext-configure gd --enable-gd --with-jpeg \
+  && docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp \
   && docker-php-ext-install \
   bcmath \
   exif \

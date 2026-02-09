@@ -7,26 +7,28 @@ WORKDIR /var/www
 RUN rm -rf /var/www/html && \
     apt-get update -yq && \
     apt-get upgrade -yq && \
-    apt-get install -yq  \
+    apt-get install -yq \
     autoconf \
     build-essential \
     curl \
     git \
     libicu-dev \
     libpq-dev \
+    libfreetype6-dev \
     libjpeg-dev \
     libpng-dev \
+    libwebp-dev \
     libzip-dev \
     unzip \
     vim \
     wget \
     zip \
     zlib1g-dev \
-    apt autoremove -y && \
-    apt clean && \
-    pecl install redis && \
-    docker-php-ext-configure gd --enable-gd --with-jpeg && \
-    docker-php-ext-install && \
+    && apt-get autoremove -y \
+    && apt-get clean \
+    && pecl install redis \
+    && docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp \
+    && docker-php-ext-install \
     bcmath \
     exif \
     gd \
@@ -37,6 +39,6 @@ RUN rm -rf /var/www/html && \
     pdo_pgsql \
     pgsql \
     zip \
-    curl -sS https://getcomposer.org/installer | php && \
-    mv composer.phar /usr/local/bin/composer && \
-    rm -rf /var/lib/apt/lists/*
+    && curl -sS https://getcomposer.org/installer | php \
+    && mv composer.phar /usr/local/bin/composer \
+    && rm -rf /var/lib/apt/lists/*

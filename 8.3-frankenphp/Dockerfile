@@ -19,6 +19,7 @@ RUN apt-get update -yq \
     && apt-get update -yq \
     && apt-get install -yq postgresql-client \
     && install-php-extensions \
+    gd \
     bcmath \
     intl \
     opcache \
