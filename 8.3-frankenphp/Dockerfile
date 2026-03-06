@@ -28,6 +28,7 @@ RUN apt-get update -yq \
     pcov \
     pdo_pgsql \
     redis \
+    excimer \
     && apt-get -y autoremove \
     && apt-get clean \
     && docker-php-source delete \

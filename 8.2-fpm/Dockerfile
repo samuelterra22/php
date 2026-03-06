@@ -26,7 +26,7 @@ RUN rm -rf /var/www/html && \
     zlib1g-dev \
     && apt-get autoremove -y \
     && apt-get clean \
-    && pecl install redis \
+    && pecl install redis excimer \
     && docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp \
     && docker-php-ext-install \
     bcmath \
@@ -39,6 +39,7 @@ RUN rm -rf /var/www/html && \
     pdo_pgsql \
     pgsql \
     zip \
+    && docker-php-ext-enable excimer \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && rm -rf /var/lib/apt/lists/*
